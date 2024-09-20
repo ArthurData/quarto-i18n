@@ -1,0 +1,100 @@
+---
+title: Revealjs i18n 
+format:
+  revealjs: 
+    footer: |
+      <select id="data-i18n-switcher" class="reaveljs-select">
+        <option selected class="drop-item" value="en">English</option>
+        <option class="drop-item" value="fr">French</option>
+        <option class="drop-item" value="de">Deutsch</option>
+        <option class="drop-item" value="it">Italian</option>
+      </select>
+    i18n:
+      defaultLocale: "en"
+      fr:
+        morning: "Le matin"
+        getting-up: "Se lever"
+        alarm: "Désactiver l'alarme"
+        bed1: "Sortir du lit"
+        breakfast: "Petit déjeuner"
+        eggs: "Manger des œufs"
+        coffee: "Boire un café"
+        evening: "Le soir"
+        dinner: "Dîner"
+        spaghetti: "Manger des spaghettis"
+        wine: "Boire du vin"
+        sleep: "S'endormir"
+        bed2: "Se mettre au lit"
+        sheep: "Compter les moutons"
+      en:
+        morning: "In the morning"
+        getting-up: "Getting up"
+        alarm: "Turn off alarm"
+        bed1: "Get out of bed"
+        breakfast: "Breakfast"
+        eggs: "Eat eggs"
+        coffee: "Drink coffee"
+        evening: "In the evening"
+        dinner: "Dinner"
+        spaghetti: "Eat spaghetti"
+        wine: "Drink wine"
+        sleep: "Going to sleep"
+        bed2: "Get in bed"
+        sheep: "Count sheep"
+      de:
+        morning: "Morgen"
+        getting-up: "Aufstehen"
+        alarm: "Alarm ausschalten"
+        bed1: "Raus aus dem Bett"
+        breakfast: "Frühstück"
+        eggs: "Eier essen"
+        coffee: "Kaffee trinken"
+        evening: "Am Abend"
+        dinner: "Abendessen"
+        spaghetti: "Spaghetti essen"
+        wine: "Wein trinken"
+        sleep: "Einschlafen"
+        bed2: "Ins Bett gehen"
+        sheep: "Schafe zählen"
+      it:
+        morning: "Al mattino"
+        getting-up: "Alzarsi"
+        alarm: "Disattivare l'allarme"
+        bed1: "Alzarsi dal letto"
+        breakfast: "Colazione"
+        eggs: "Mangiare uova"
+        coffee: "Bere caffè"
+        evening: "La sera"
+        dinner: "Cena"
+        spaghetti: "Mangiare spaghetti"
+        wine: "Bere vino"
+        sleep: "Andare a dormire"
+        bed2: "Andare a letto"
+        sheep: "Contare le pecore"
+revealjs-plugins:
+  - i18n
+---
+
+# <span data-i18n-key="morning"></span>
+
+## <span data-i18n-key="getting-up"></span>
+
+- <span data-i18n-key="alarm"></span>
+- <span data-i18n-key="bed1"></span>
+ 
+## <span data-i18n-key="breakfast"></span>
+
+- <span data-i18n-key="eggs"></span>
+- <span data-i18n-key="coffee"></span>
+
+# <span data-i18n-key="evening"></span>
+
+## <span data-i18n-key="dinner"></span>
+
+- <span data-i18n-key="spaghetti"></span>
+- <span data-i18n-key="wine"></span>
+
+## <span data-i18n-key="sleep"></span>
+
+- <span data-i18n-key="bed2"></span>
+- <span data-i18n-key="sheep"></span>
