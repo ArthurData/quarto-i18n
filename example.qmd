@@ -70,26 +70,26 @@ revealjs-plugins:
   - i18n
 ---
 
-# <span data-i18n-key="morning"></span>
+# {{< i18n-key "morning" >}}
 
-## <span data-i18n-key="getting-up"></span>
+## {{< i18n-key "getting-up" >}}
 
-- <span data-i18n-key="alarm"></span>
-- <span data-i18n-key="bed1"></span>
+- {{< i18n-key "alarm" >}}
+- {{< i18n-key "bed1" >}}
  
-## <span data-i18n-key="breakfast"></span>
+## {{< i18n-key "breakfast" >}}
 
-- <span data-i18n-key="eggs"></span>
-- <span data-i18n-key="coffee"></span>
+- {{< i18n-key "eggs" >}}
+- {{< i18n-key "coffee" >}}
 
-# <span data-i18n-key="evening"></span>
+# {{< i18n-key "evening" >}}
 
-## <span data-i18n-key="dinner"></span>
+## {{< i18n-key "dinner" >}}
 
-- <span data-i18n-key="spaghetti"></span>
-- <span data-i18n-key="wine"></span>
+- {{< i18n-key "spaghetti" >}}
+- {{< i18n-key "wine" >}}
 
 ## <span data-i18n-key="sleep"></span>
 
-- <span data-i18n-key="bed2"></span>
-- <span data-i18n-key="sheep"></span>
+- {{< i18n-key "bed2" >}}
+- {{< i18n-key "sheep" tag="h6">}}

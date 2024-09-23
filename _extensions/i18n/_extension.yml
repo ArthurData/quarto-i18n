@@ -4,7 +4,8 @@ version: 1.0.0
 quarto-required: ">=1.5.0"
 contributes:
   shortcodes:
-    - 18n_select.lua
+    - i18n_select.lua
+    - i18n_tags.lua
   revealjs-plugins:
     - name: RevealI18n
       stylesheet:
