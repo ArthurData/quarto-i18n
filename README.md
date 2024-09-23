@@ -93,3 +93,37 @@ revealjs-plugins:
 ```
 
 <img src="i18n.gif" width="100%"/></a>
+
+### Use tags
+
+To define the text that you want to translate, you can use the `data-i18n-key` attribute.
+
+There are several ways to define the text that you want to translate:
+
+- Use the `data-i18n-key` attribute with the key of the text that you want to translate as HTML tag:
+
+```r
+<span data-i18n-key="morning"></span>
+```
+
+- Use the `data-i18n-key` attribute with the key of the text that you want to translate as a Lua shortcut:
+
+```r
+{{< i18n-key "bed2" >}}
+```
+
+This will add a `span` tag with the key of the text that you want to translate.
+
+This solution is **shorter and useful** when you have a lot of text to translate.
+
+_Good to know_: this shortcut comes with a tag parameter that you can use to define the tag that you want to use.
+
+```r
+{{< i18n-key "bed2" tag="h1" >}}
+```
+
+This will produce a `h1` tag with the key of the text that you want to translate.
+
+## More details
+
+See the [deploy presentation](https://arthurdata.github.io/quarto-i18n/) to see the result and [read the code](https://github.com/ArthurData/quarto-i18n/blob/main/example.qmd) to understand how it works
