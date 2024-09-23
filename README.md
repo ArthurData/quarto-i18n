@@ -1,6 +1,6 @@
 # I18n Extension For Quarto
 
-i18n extension for Quarto helps to manage multiple languages in your documents.
+i18n extension for Quarto helps to **manage multiple languages** in your documents. You can use it with a default language or with a language selector.
 
 ## Installing
 
@@ -11,6 +11,8 @@ quarto add ArthurData/quarto-i18n
 > Requires Quarto >=1.5.0
 
 ## Usage
+
+### Use the default language
 
 You can use it to manage multiple languages in your documents.
 
@@ -44,7 +46,21 @@ revealjs-plugins:
 <span data-i18n-key="getting-up"></span>
 ```
 
-or you can use it with a select input to change the language:
+In this case, the default language is Italian. You will not be able to change the language.
+
+### Use the language selector
+
+You can also use a language selector to change the language of your document.
+
+This extension came with a language selector that you can add to your document.
+
+```r
+{{< i18n-select choices="fr:Français, en:English" selected="fr" >}}
+```
+
+This will add a dropdown to your document that will allow you to change the language. The `choices` attribute is a list of languages that you want to display in the dropdown. The `selected` attribute is the default language.
+
+`fr` is the key of the language and `Français` is the value that will be displayed in the dropdown.
 
 ```r
 ---
@@ -52,12 +68,7 @@ title: Revealjs i18n
 format:
   revealjs:
     footer: |
-      <select id="data-i18n-switcher" class="reaveljs-select">
-        <option selected class="drop-item" value="en">English</option>
-        <option class="drop-item" value="fr">French</option>
-        <option class="drop-item" value="de">Deutsch</option>
-        <option class="drop-item" value="it">Italian</option>
-      </select>
+      {{< i18n-select choices="fr:Français, en:English, de:Deutsch, it:Italiano" selected="fr" >}}
     i18n:
       defaultLocale: "fr"
       fr:
