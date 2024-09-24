@@ -106,7 +106,7 @@ There are several ways to define the text that you want to translate:
 <span data-i18n-key="morning"></span>
 ```
 
-- Use the `data-i18n-key` attribute with the key of the text that you want to translate as a Lua shortcut:
+- Use the `i18n-key` shortcut with the key of the text that you want to translate as a Lua shortcut:
 
 ```r
 {{< i18n-key "bed2" >}}
