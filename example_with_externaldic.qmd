@@ -1,0 +1,38 @@
+---
+title: Revealjs i18n 
+format:
+  revealjs: 
+    footer: |
+      {{< i18n-select choices="fr:Français, en:English, de:Deutsch, it:Italiano" selected="fr" >}}
+    i18n:
+      defaultLocale: "fr"
+      dictionaryPath:
+        translations.yml
+revealjs-plugins:
+  - i18n
+---
+
+# {{< i18n-key "morning" >}}
+
+## {{< i18n-key "getting-up" >}}
+
+- {{< i18n-key "alarm" >}}
+- {{< i18n-key "bed1" >}}
+ 
+## {{< i18n-key "breakfast" >}}
+
+- {{< i18n-key "eggs" >}}
+- {{< i18n-key "coffee" >}}
+
+# {{< i18n-key "evening" >}}
+
+## {{< i18n-key "dinner" >}}
+
+- {{< i18n-key "spaghetti" >}}
+- {{< i18n-key "wine" >}}
+
+## {{< i18n-key "sleep" >}}
+
+- {{< i18n-key "bed2" >}}
+- {{< i18n-key "sheep" tag="h6">}}
+
