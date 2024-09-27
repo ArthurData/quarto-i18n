@@ -94,9 +94,52 @@ revealjs-plugins:
 
 <img src="i18n.gif" width="100%"/></a>
 
-### Use tags
+### Use an external dictionary file
 
-To define the text that you want to translate, you can use the `data-i18n-key` attribute.
+You can also use an external dictionary file to manage your translations.
+
+```r
+---
+title: Revealjs i18n
+format:
+  revealjs:
+    footer: |
+      {{< i18n-select choices="fr:Français, en:English, de:Deutsch, it:Italiano" selected="fr" >}}
+    i18n:
+      defaultLocale: "fr"
+      dictionaryPath:
+        translations.yml
+revealjs-plugins:
+  - i18n
+---
+
+# {{< i18n-key "morning" >}}
+
+## {{< i18n-key "getting-up" >}}
+```
+
+In this case, the `dictionaryPath` attribute is the path to the dictionary file. The dictionary file must be in the YAML format.
+
+```yaml
+fr:
+  morning: "Le matin"
+  getting-up: "Se lever"
+en:
+  morning: "In the morning"
+  getting-up: "Getting up"
+de:
+  morning: "Morgen"
+  getting-up: "Aufstehen"
+it:
+  morning: "Al mattino"
+  getting-up: "Alzarsi"
+```
+
+💡 This will produce the **same result** as the previous example but with an external dictionary file which is **more convenient when you have a lot of translations**.
+
+See the `example_with_externaldic.qmd` file and `translations.yml` file to see how it works.
+
+## Use tags
 
 There are several ways to define the text that you want to translate:
 
@@ -106,13 +149,13 @@ There are several ways to define the text that you want to translate:
 <span data-i18n-key="morning"></span>
 ```
 
-- Use the `i18n-key` shortcut with the key of the text that you want to translate as a Lua shortcut:
+- Use the `i18n-key` shortcut 🚀🚀 with the key of the text that you want to translate as a Lua shortcut:
 
 ```r
 {{< i18n-key "bed2" >}}
 ```
 
-This will add a `span` tag with the key of the text that you want to translate.
+This will add a `span` tag with the key of the text that you want to translate. In fact, the default tag is `span`.
 
 This solution is **shorter and useful** when you have a lot of text to translate.
 

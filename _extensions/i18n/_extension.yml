@@ -12,6 +12,7 @@ contributes:
         - i18n.css
       script:
         - i18n.js
+        - js-yaml.min.js
       config:
         i18n:
           extension: "i18n"
